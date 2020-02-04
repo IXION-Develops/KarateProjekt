@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0CCA0414-946E-4750-BF8F-EF68A6C250BD}</ProjectGuid>
+    <ProjectGuid>{CD84AF9D-9701-4FA1-AB9C-A12D607978BA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SlownikiKarate</RootNamespace>
-    <AssemblyName>SlownikiKarate</AssemblyName>
+    <RootNamespace>TurniejManager</RootNamespace>
+    <AssemblyName>TurniejManager</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
