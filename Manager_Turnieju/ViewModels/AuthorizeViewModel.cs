@@ -21,6 +21,7 @@ namespace Manager_Turnieju.ViewModels
             set 
             {
                 tempPassword = value;
+                NotifyOfPropertyChange(() => Password);
             }
         }
         public void Click()
@@ -31,7 +32,7 @@ namespace Manager_Turnieju.ViewModels
         }
         private void ClearPassword()
         {
-            tempPassword = null;
+            Password = null;
         }
         private void SetSecurePassword()
         {
@@ -40,7 +41,6 @@ namespace Manager_Turnieju.ViewModels
                 foreach (char c in tempPassword.ToCharArray())
                 {
                     securyePassword.AppendChar(c);
-
                 }
             }
         }
