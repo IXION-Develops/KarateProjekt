@@ -23,7 +23,6 @@ namespace Manager_Turnieju.Views
         public AuthorizeView()
         {
             InitializeComponent();
-            this.DataContext = new AuthorizeViewModel();
         }
     }
 }
