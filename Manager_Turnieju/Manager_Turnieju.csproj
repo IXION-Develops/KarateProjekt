@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="caliburn.micro" Version="3.2.0" />
+    <PackageReference Include="Caliburn.Micro.AutofacBootstrap" Version="3.0.1.17" />
   </ItemGroup>
 
 </Project>

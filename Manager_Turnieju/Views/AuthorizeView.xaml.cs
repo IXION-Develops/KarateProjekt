@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Manager_Turnieju.ViewModels;
+﻿using System.Windows;
 
 namespace Manager_Turnieju.Views
 {
@@ -23,7 +10,7 @@ namespace Manager_Turnieju.Views
         public AuthorizeView()
         {
             InitializeComponent();
-            this.DataContext = new AuthorizeViewModel();
+            
         }
     }
 }
