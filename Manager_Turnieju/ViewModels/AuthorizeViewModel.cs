@@ -1,16 +1,12 @@
 ﻿using Caliburn.Micro;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace Manager_Turnieju.ViewModels
 {
-    class AuthorizeViewModel : Screen
+    public class AuthorizeViewModel : Screen
     {
+    
         private SecureString securyePassword = new SecureString();
 
         private string tempPassword;
