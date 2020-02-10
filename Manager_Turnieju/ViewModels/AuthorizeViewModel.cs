@@ -11,6 +11,15 @@ namespace Manager_Turnieju.ViewModels
         private string pass = "1234";
         private string tempPassword;
 
+
+        private readonly WindowManager _windowManager;
+        private readonly ManagerViewModel _managerViewModel;
+        public AuthorizeViewModel(WindowManager windowManager, ManagerViewModel managerViewModel)
+        {
+            _windowManager = windowManager;
+            _managerViewModel = managerViewModel;
+        }
+
         public string Password
         {
             get { return tempPassword; }
@@ -25,8 +34,9 @@ namespace Manager_Turnieju.ViewModels
             SetSecurePassword();
             if (PasswordVerification(Password))
             {
-                MessageBox.Show("New page");
-                // pass new window
+                // pass to new window
+                _windowManager.ShowWindow(_managerViewModel, null, null);
+                this.TryClose();
             }
             else
             {
@@ -46,6 +56,7 @@ namespace Manager_Turnieju.ViewModels
         {
             Password = null;
         }
+
         private void SetSecurePassword()
         {
             if (tempPassword != null)
