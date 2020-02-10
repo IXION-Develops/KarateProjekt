@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Manager_Turnieju.Views"
         mc:Ignorable="d"
         xmlns:pwbx="clr-namespace:Manager_Turnieju.Controls"
-        Title="Autoryzacja" Height="200" Width="400" ResizeMode="NoResize">
+        Title="Autoryzacja" Height="200" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         
         <Grid.ColumnDefinitions>

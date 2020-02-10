@@ -8,7 +8,7 @@ namespace Manager_Turnieju.ViewModels
     {
     
         private SecureString securyePassword = new SecureString();
-
+        private string pass = "1234";
         private string tempPassword;
 
         public string Password
@@ -22,10 +22,26 @@ namespace Manager_Turnieju.ViewModels
         }
         public void Click()
         {
-            MessageBox.Show(Password);
             SetSecurePassword();
-            ClearPassword();
+            if (PasswordVerification(Password))
+            {
+                MessageBox.Show("New page");
+                // pass new window
+            }
+            else
+            {
+                MessageBox.Show("Nieprawidłowe hasło");
+                ClearPassword();
+            }
         }
+
+        public bool PasswordVerification(string password)
+        {
+            if (password == pass)
+                return true;
+            return false;
+        }
+
         private void ClearPassword()
         {
             Password = null;
