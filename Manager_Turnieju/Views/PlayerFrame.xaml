@@ -25,7 +25,7 @@
         <Label Grid.Row="0" Grid.ColumnSpan="4" Content="Zawodnicy" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Beige" />
         <TextBox x:Name="Filtr"  Width="200" Height="25" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <DataGrid Grid.Row="2" Grid.ColumnSpan="4" 
-                  AutoGenerateColumns="false" CanUserAddRows="False" CanUserDeleteRows="false" RowBackground="#05223b" CanUserResizeRows="False" CellEditEnding="dataG_products_CellEditEnding"
+                  AutoGenerateColumns="false" CanUserAddRows="False" CanUserDeleteRows="false" RowBackground="#05223b" CanUserResizeRows="False"
                   ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Lp." Binding="{Binding Index}"  Width="50"  IsReadOnly="True" SortDirection="Ascending"/>
