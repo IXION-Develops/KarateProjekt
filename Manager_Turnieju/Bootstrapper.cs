@@ -19,13 +19,14 @@ namespace Manager_Turnieju
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
 
-            DisplayRootViewFor<ManagerViewModel>();
+            DisplayRootViewFor<AuthorizeViewModel>();
             
         }
 
         protected override void ConfigureBootstrapper()
         {
             base.ConfigureBootstrapper();
+            // ?
             EnforceNamespaceConvention = false;
         }
 

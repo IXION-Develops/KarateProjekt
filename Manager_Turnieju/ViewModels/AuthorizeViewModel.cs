@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using System;
 using System.Security;
 using System.Windows;
 
@@ -7,6 +8,7 @@ namespace Manager_Turnieju.ViewModels
     public class AuthorizeViewModel : Screen
     {
     
+        
         private SecureString securyePassword = new SecureString();
         private string pass = "1234";
         private string tempPassword;
@@ -26,15 +28,21 @@ namespace Manager_Turnieju.ViewModels
             set 
             {
                 tempPassword = value;
+                //CanClick(tempPassword);
                 NotifyOfPropertyChange(() => Password);
             }
         }
-        public void Click()
+        public bool CanClick(string tempPassword)
+        {
+            return !String.IsNullOrWhiteSpace(tempPassword);
+        }
+
+
+        public void Click(string tempPassword)
         {
             SetSecurePassword();
             if (PasswordVerification(Password))
             {
-                // pass to new window
                 _windowManager.ShowWindow(_managerViewModel, null, null);
                 this.TryClose();
             }
@@ -45,6 +53,12 @@ namespace Manager_Turnieju.ViewModels
             }
         }
 
+        private void ClearPassword()
+        {
+            Password = null;
+        }
+
+
         public bool PasswordVerification(string password)
         {
             if (password == pass)
@@ -52,10 +66,6 @@ namespace Manager_Turnieju.ViewModels
             return false;
         }
 
-        private void ClearPassword()
-        {
-            Password = null;
-        }
 
         private void SetSecurePassword()
         {
