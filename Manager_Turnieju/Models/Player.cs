@@ -50,6 +50,8 @@ namespace Manager_Turnieju.Models
         public string Email { get; set; }
         public bool Kumite { get; set; }
         public bool Kata { get; set; }
+
+        public int IdClub { get; set; }
         public Club Club {get;set;}
 
     }
