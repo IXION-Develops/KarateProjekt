@@ -1,6 +1,8 @@
 ﻿using Autofac;
 using Caliburn.Micro;
 using Caliburn.Micro.Autofac;
+using Manager_Turnieju.Data;
+using Manager_Turnieju.Models;
 using Manager_Turnieju.ViewModels;
 using Manager_Turnieju.Views;
 using System.Windows;
@@ -36,7 +38,10 @@ namespace Manager_Turnieju
             builder.RegisterType<AuthorizeViewModel>();
             builder.RegisterType<WindowManager>();
             builder.RegisterType<ManagerViewModel>();
-          
+
+            builder.RegisterType<PlayerMockRepository>().As<IPlayerRepository<Player>>().SingleInstance();
+            builder.RegisterType<ClubMockRepository>().As<IClubRepository<Club>>().SingleInstance();
+
         }
 
     }
