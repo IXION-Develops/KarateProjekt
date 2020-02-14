@@ -30,8 +30,11 @@
                 <Button x:Name="Click_Turniej" Uid="1" Width="100" Height="30" Content="Turnieje" Margin="20"/>
                 <Button x:Name="Click_Zawodnik" Uid="1" Width="100" Height="30" Content="Zawodnicy" Margin="20"/>
                 <Button x:Name="Click_Sędzia" Uid="1" Width="100" Height="30" Content="Sędziowie" Margin="20"/>
-                <Button x:Name="Click_" Uid="1" Width="100" Height="30" Content="Anything" Margin="20"/>
+                <Button x:Name="Click_Klub" Uid="1" Width="100" Height="30" Content="Kluby" Margin="20"/>
             </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" >
+            <ContentControl x:Name="ActiveItem"/>
         </Grid>
     </Grid>
 </Window>

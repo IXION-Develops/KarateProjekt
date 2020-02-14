@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Manager_Turnieju.ViewModels
 {
-    public class ManagerViewModel : Screen
+    public class ManagerViewModel : Conductor<object>
     {
         public ManagerViewModel()
         {
@@ -19,7 +19,7 @@ namespace Manager_Turnieju.ViewModels
 
         public void Click_Zawodnik()
         {
-            throw new NotImplementedException();
+            ActivateItem(new PlayersFrameViewModel());
         }
 
         public void Click_Sędzia()

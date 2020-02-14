@@ -28,6 +28,7 @@ namespace Manager_Turnieju
         protected override void ConfigureBootstrapper()
         {
             base.ConfigureBootstrapper();
+            // ?
             EnforceNamespaceConvention = false;
         }
 
