@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Manager_Turnieju.ViewModels
 {
-    class PlayerFrameViewModel : Screen
+    class PlayersFrameViewModel : Screen
     {
     }
 }

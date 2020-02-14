@@ -19,8 +19,7 @@ namespace Manager_Turnieju.ViewModels
 
         public void Click_Zawodnik()
         {
-            // implemented progress
-            ActivateItem(new PlayerFrameViewModel());
+            ActivateItem(new PlayersFrameViewModel());
         }
 
         public void Click_Sędzia()
