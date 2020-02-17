@@ -18,15 +18,12 @@ namespace Manager_Turnieju
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-
-            DisplayRootViewFor<AuthorizeViewModel>();
-            
+            DisplayRootViewFor<ManagerViewModel>();
         }
 
         protected override void ConfigureBootstrapper()
         {
             base.ConfigureBootstrapper();
-            // ?
             EnforceNamespaceConvention = false;
         }
 
@@ -35,14 +32,15 @@ namespace Manager_Turnieju
             builder.RegisterType<PlayerMockRepository>().As<IPlayerRepository<Player>>().SingleInstance();
             builder.RegisterType<ClubMockRepository>().As<IClubRepository<Club>>().SingleInstance();
 
+            // Views
             builder.RegisterType<AuthorizeView>();
             builder.RegisterType<AuthorizeViewModel>();
             builder.RegisterType<WindowManager>();
-            builder.RegisterType<ManagerViewModel>();
+            builder.RegisterType<ManagerViewModel>().SingleInstance();
             builder.RegisterType<PlayersFrameView>();
             builder.RegisterType<PlayersFrameViewModel>();
-
-            
+            builder.RegisterType<AddPlayerViewModel>();
+            builder.RegisterType<AddPlayerView>();
         }
 
     }

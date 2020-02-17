@@ -21,18 +21,21 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Grid.ColumnSpan="4" Content="Zawodnicy" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Beige" />
-        <TextBox x:Name="Filtr"  Width="200" Height="25" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBox x:Name="Filtr" Width="200" Height="25" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <DataGrid x:Name="Players" Grid.Row="2" Grid.ColumnSpan="4" 
                   AutoGenerateColumns="false" CanUserAddRows="False" CanUserDeleteRows="false" RowBackground="#05223b" CanUserResizeRows="False"
                   ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Lp." Binding="{Binding Index}"  Width="50"  IsReadOnly="True" SortDirection="Ascending"/>
-                <DataGridTextColumn Header="Imie" Width="200" Binding="{Binding Firstname}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Imie" Width="200" Binding="{Binding Name}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Nazwisko" Width="400*" Binding="{Binding Surname}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Klub" Width="Auto" Binding="{Binding Klub}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Stopień" Width="Auto" Binding="{Binding Stopien}" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Width="100" Height="50" Content="Dodaj" Grid.Row="4" Grid.ColumnSpan="4" HorizontalAlignment="Center"/>
+        <Button x:Name="btn_Dodaj"  Width="100" Height="50" Content="Dodaj" Grid.Row="4" Grid.ColumnSpan="4" HorizontalAlignment="Center"/>
+        <Grid Grid.ColumnSpan="5" Grid.RowSpan="5">
+            <ContentControl  x:Name="ActiveItem"/>
+        </Grid>
     </Grid>
 </UserControl>
