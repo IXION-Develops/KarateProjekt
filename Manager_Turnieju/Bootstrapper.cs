@@ -11,8 +11,6 @@ namespace Manager_Turnieju
 {
     public class Bootstrapper : AutofacBootstrapper<AuthorizeViewModel>
     {
-       
-
         public Bootstrapper()
         {
             Initialize();
@@ -21,7 +19,7 @@ namespace Manager_Turnieju
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
 
-            DisplayRootViewFor<ManagerViewModel>();
+            DisplayRootViewFor<AuthorizeViewModel>();
             
         }
 
@@ -39,10 +37,11 @@ namespace Manager_Turnieju
             builder.RegisterType<AuthorizeViewModel>();
             builder.RegisterType<WindowManager>();
             builder.RegisterType<ManagerViewModel>();
+            builder.RegisterType<PlayersFrameView>();
+            builder.RegisterType<PlayersFrameViewModel>();
 
             builder.RegisterType<PlayerMockRepository>().As<IPlayerRepository<Player>>().SingleInstance();
             builder.RegisterType<ClubMockRepository>().As<IClubRepository<Club>>().SingleInstance();
-
         }
 
     }

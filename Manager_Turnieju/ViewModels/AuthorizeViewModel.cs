@@ -28,13 +28,13 @@ namespace Manager_Turnieju.ViewModels
             set 
             {
                 tempPassword = value;
-                //CanClick(tempPassword);
                 NotifyOfPropertyChange(() => Password);
+                NotifyOfPropertyChange(() => CanClick);
             }
         }
-        public bool CanClick(string tempPassword)
+        public bool CanClick
         {
-            return !String.IsNullOrWhiteSpace(tempPassword);
+            get { return !String.IsNullOrWhiteSpace(tempPassword); }
         }
 
 

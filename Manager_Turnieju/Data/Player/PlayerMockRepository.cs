@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Manager_Turnieju.Data
 {
-    class PlayerMockRepository : IPlayerRepository<Player>
+    public class PlayerMockRepository : IPlayerRepository<Player>
     {
         private List<Player> _playersList;
 
