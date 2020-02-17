@@ -32,7 +32,9 @@ namespace Manager_Turnieju
 
         protected override void ConfigureContainer(ContainerBuilder builder)
         {
-           
+            builder.RegisterType<PlayerMockRepository>().As<IPlayerRepository<Player>>().SingleInstance();
+            builder.RegisterType<ClubMockRepository>().As<IClubRepository<Club>>().SingleInstance();
+
             builder.RegisterType<AuthorizeView>();
             builder.RegisterType<AuthorizeViewModel>();
             builder.RegisterType<WindowManager>();
@@ -40,8 +42,7 @@ namespace Manager_Turnieju
             builder.RegisterType<PlayersFrameView>();
             builder.RegisterType<PlayersFrameViewModel>();
 
-            builder.RegisterType<PlayerMockRepository>().As<IPlayerRepository<Player>>().SingleInstance();
-            builder.RegisterType<ClubMockRepository>().As<IClubRepository<Club>>().SingleInstance();
+            
         }
 
     }

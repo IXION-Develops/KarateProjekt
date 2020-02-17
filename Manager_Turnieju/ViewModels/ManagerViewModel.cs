@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Manager_Turnieju.ViewModels
 {
-    public class ManagerViewModel : Screen
+    public class ManagerViewModel : Conductor<object>
     {
         readonly PlayersFrameViewModel _playersFrameViewModel;
         public ManagerViewModel(PlayersFrameViewModel playersFrameViewModel)
@@ -20,7 +20,7 @@ namespace Manager_Turnieju.ViewModels
 
         public void Click_Zawodnik()
         {
-            //ActivateItem(_playersFrameViewModel);
+            ActivateItem(_playersFrameViewModel);
         }
 
         public void Click_Sędzia()
