@@ -37,8 +37,8 @@ namespace Manager_Turnieju
             builder.RegisterType<AuthorizeViewModel>();
             builder.RegisterType<WindowManager>();
             builder.RegisterType<ManagerViewModel>().SingleInstance();
-            builder.RegisterType<PlayersFrameView>();
-            builder.RegisterType<PlayersFrameViewModel>();
+            builder.RegisterType<PlayersView>();
+            builder.RegisterType<PlayersViewModel>();
             builder.RegisterType<AddPlayerViewModel>();
             builder.RegisterType<AddPlayerView>();
         }

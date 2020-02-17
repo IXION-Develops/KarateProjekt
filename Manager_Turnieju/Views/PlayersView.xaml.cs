@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace Manager_Turnieju.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy PlayersFrameView.xaml
+    /// Logika interakcji dla klasy PlayerView.xaml
     /// </summary>
-    public partial class PlayersFrameView : UserControl
+    public partial class PlayersView : UserControl
     {
-        public PlayersFrameView()
+        public PlayersView()
         {
             InitializeComponent();
         }

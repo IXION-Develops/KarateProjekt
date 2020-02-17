@@ -7,12 +7,9 @@ namespace Manager_Turnieju.ViewModels
 {
     public class AuthorizeViewModel : Screen
     {
-    
-        
         private SecureString securyePassword = new SecureString();
         private string pass = "1234";
         private string tempPassword;
-
 
         private readonly WindowManager _windowManager;
         private readonly ManagerViewModel _managerViewModel;
@@ -36,8 +33,6 @@ namespace Manager_Turnieju.ViewModels
         {
             get { return !String.IsNullOrWhiteSpace(tempPassword); }
         }
-
-
         public void Click(string tempPassword)
         {
             SetSecurePassword();
@@ -52,21 +47,16 @@ namespace Manager_Turnieju.ViewModels
                 ClearPassword();
             }
         }
-
         private void ClearPassword()
         {
             Password = null;
         }
-
-
         public bool PasswordVerification(string password)
         {
             if (password == pass)
                 return true;
             return false;
         }
-
-
         private void SetSecurePassword()
         {
             if (tempPassword != null)

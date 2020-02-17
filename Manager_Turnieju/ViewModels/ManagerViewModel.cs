@@ -7,9 +7,9 @@ namespace Manager_Turnieju.ViewModels
 {
     public class ManagerViewModel : Conductor<object>
     {
-        public readonly PlayersFrameViewModel _playersFrameViewModel;
+        public readonly PlayersViewModel _playersFrameViewModel;
 
-        public ManagerViewModel(PlayersFrameViewModel playersFrameViewModel)
+        public ManagerViewModel(PlayersViewModel playersFrameViewModel)
         {
             _playersFrameViewModel = playersFrameViewModel;
         }
@@ -19,11 +19,14 @@ namespace Manager_Turnieju.ViewModels
             throw new NotImplementedException();
         }
 
-        public void Click_Zawodnik()
+        public void btn_Zawodnik()
         {
-           
-            LoadFrame(_playersFrameViewModel);
-            
+            foreach (var item in GetChildren())
+            {
+                _playersFrameViewModel.DeactivateItem((item as Conductor<object>)?.ActiveItem, true);
+            }
+            ActivateItem(_playersFrameViewModel);
+
         }
 
         public void Click_Sędzia()
@@ -34,18 +37,6 @@ namespace Manager_Turnieju.ViewModels
         public void Click_()
         {
             throw new NotImplementedException();
-        }
-
-        public void LoadFrame(object frame)
-        {
-            
-            ActivateItem(frame);
-            
-        }
-
-        public void DeactivateFrame(object frame)
-        {
-            DeactivateItem(frame, true);
         }
     }
 }

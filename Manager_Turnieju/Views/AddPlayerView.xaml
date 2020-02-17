@@ -23,7 +23,8 @@
                 <RowDefinition Height="0.1*"/>
                 <RowDefinition Height="0.1*"/>
                 <RowDefinition Height="0.1*"/>
-            </Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
 
 
             <TextBlock Text="Imię:" VerticalAlignment="Center" FontSize="20" Grid.Row="0" Grid.Column="0" Margin="10"/>
@@ -43,7 +44,7 @@
                 <ComboBoxItem>Mężczyzna</ComboBoxItem>
                 <ComboBoxItem>Kobieta</ComboBoxItem>
             </ComboBox>
-            <DatePicker Name="BirthDate" FontSize="20" Margin="5" Grid.Row="3" Grid.Column="1"/>
+            <DatePicker Name="BirthDate" FontSize="20" Margin="5" Grid.Row="3" Grid.Column="1" ToolTip="mm.dd.rr"/>
             <TextBox Name="Weight" FontSize="20" Margin="5" Grid.Row="4" Grid.Column="1"/>
             <ComboBox Name="Level" FontSize="20" Margin="5" Grid.Row="5" Grid.Column="1">
 
@@ -60,5 +61,7 @@
             <ComboBox Name="Club" FontSize="20" Margin="5" Grid.Row="9" Grid.Column="1">
 
             </ComboBox>
-        </Grid>
+
+        <Button x:Name="btn_Dodaj" Content="Dodaj"  Grid.Row="10" Grid.ColumnSpan="2" />
+    </Grid>
 </UserControl>
